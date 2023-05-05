@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Medical Information Form</title>
+    <!-- Link -->
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="parentForm">
+        <div class="infoForm m-auto">
+            <!-- !Medical Information Form -->
+            <!-- *Title -->
+            <h2 class="text-center text-uppercase fw-bolder mb-4">Medical Information Form</h2>
+            <!-- *Form -->
+            <form action="">
+                <!-- Name -->
+                <div class="d-flex flex-column">
+                    <label class="mb-1">Name</label>
+                    <input type="text" placeholder="Name" />
+                </div>
+                <!-- Gender -->
+                <div class="d-flex flex-column">
+                    <label>Gender</label>
+                    <select>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <!-- Age -->
+                <div class="d-flex flex-column">
+                    <label>Age</label>
+                    <input type="number" class="" placeholder="Age" />
+                </div>
+                <!-- Marital -->
+                <div class="d-flex flex-column">
+                    <label>Marital Status</label>
+                    <select>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Divorced">Divorced</option>
+                        <option value="Widowed">Widowed</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <!-- ID NUM -->
+                <div class="d-flex flex-column">
+                    <label>ID Number</label>
+                    <input type="text" placeholder="ID Number" />
+                </div>
+                <!-- Phone -->
+                <div class="d-flex flex-column">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Phone Number" />
+                </div>
+                <!-- Your Doc -->
+                <div class="d-flex flex-column">
+                    <label>Your Doctor</label>
+                    <input type="text" placeholder="Your Doctor" />
+                </div>
+                <!-- Doc phone Num -->
+                <div class="d-flex flex-column">
+                    <label>Doctor Phone Number</label>
+                    <input type="tel" placeholder="Doctor Phone Number" />
+                </div>
+                <!-- Height -->
+                <div class="d-flex flex-column">
+                    <label>Height (cm)</label>
+                    <input type="number" placeholder="Height" />
+                </div>
+                <!-- Weight -->
+                <div class="d-flex flex-column">
+                    <label>Weight (kg)</label>
+                    <input type="number" placeholder="Weight" />
+                </div>
+                <!-- Blood -->
+                <div class="d-flex flex-column">
+                    <label>Blood Group:</label>
+                    <select>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                <!-- Caretaker -->
+                <div class="d-flex flex-column">
+                    <label>Caretaker Phone Number <small>(optional)</small></label>
+                    <input type="tel" placeholder="Caretaker Phone Number" />
+                </div>
+
+                <!-- !Patient Medical History -->
+                <!-- *Title -->
+                <h3 class="mb-0 mt-4 text-capitalize text-center">Patient Medical History</h3>
+                <!-- Allergies -->
+                <div class="d-flex flex-column">
+                    <label>Allergies <small>(include drug allergies)</small></label>
+                    <div class="d-flex flex-wrap justify-content-between gap-2">
+                        <!-- Penicillin -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Penicillin">
+                            <label class="form-check-label">Penicillin</label>
+                        </div>
+                        <!-- Sulfa -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Sulfa">
+                            <label class="form-check-label">Sulfa</label>
+                        </div>
+                        <!-- Latex -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Latex">
+                            <label class="form-check-label">Latex</label>
+                        </div>
+                        <!-- Pollen -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Pollen">
+                            <label class="form-check-label">Pollen</label>
+                        </div>
+                        <!-- Food -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Food">
+                            <label class="form-check-label">Food</label>
+                        </div>
+                        <!-- Cosmetic -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Cosmetic">
+                            <label class="form-check-label">Cosmetic</label>
+                        </div>
+                        <!-- Metal -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Metal">
+                            <label class="form-check-label">Metal</label>
+                        </div>
+                        <!-- Sunlight  -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Sunlight ">
+                            <label class="form-check-label">Sunlight</label>
+                        </div>
+                        <!-- Others -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Others">
+                            <label class="form-check-label">Others</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Current Medications -->
+                <div class="d-flex flex-column">
+                    <label>Current Medications</label>
+                    <textarea rows="6" placeholder="Current Medications"></textarea>
+                </div>
+                <!-- Immunization -->
+                <div class="d-flex flex-column">
+                    <label>Immunization</label>
+                    <textarea rows="6" placeholder="Immunization"></textarea>
+                </div>
+                <!-- Family History -->
+                <div class="d-flex flex-column">
+                    <label>Family History</label>
+                    <textarea rows="6" placeholder="Family History"></textarea>
+                </div>
+                <!-- Medical History -->
+                <div class="d-flex flex-column">
+                    <!-- Title -->
+                    <label class="mb-2">Medical History <small>(chronic illnesses)</small></label>
+                    <div class="d-flex flex-wrap justify-content-between gap-1">
+                        <!-- Diabetes -->
+                        <div class="form-check d-flex gap-1">
+                            <input class="form-check-input" type="checkbox" value="Diabetes">
+                            <label class="form-check-label">
+                                Diabetes
+                            </label>
+                        </div>
+                        <!-- Heart Disease -->
+                        <div class="form-check d-flex gap-1">
+                            <input class="form-check-input" type="checkbox" value="Heart Disease">
+                            <label class="form-check-label">
+                                Heart Disease
+                            </label>
+                        </div>
+                        <!-- Stroke -->
+                        <div class="form-check d-flex gap-1">
+                            <input class="form-check-input" type="checkbox" value="Stroke">
+                            <label class="form-check-label">
+                                Stroke
+                            </label>
+                        </div>
+                        <!-- Cancer -->
+                        <div class="form-check d-flex gap-1">
+                            <input class="form-check-input" type="checkbox" value="Cancer">
+                            <label class="form-check-label">
+                                Cancer
+                            </label>
+                        </div>
+                        <!-- Anemia -->
+                        <div class="form-check d-flex gap-1">
+                            <input class="form-check-input" type="checkbox" value="Anemia">
+                            <label class="form-check-label">
+                                Anemia
+                            </label>
+                        </div>
+                        <!-- Arthritis -->
+                        <div class="form-check d-flex gap-1">
+                            <input class="form-check-input" type="checkbox" value="Arthritis">
+                            <label class="form-check-label">
+                                Arthritis
+                            </label>
+                        </div>
+                        <!-- Asthma -->
+                        <div class="form-check d-flex gap-1">
+                            <input class="form-check-input" type="checkbox" value="Asthma">
+                            <label class="form-check-label">
+                                Asthma
+                            </label>
+                        </div>
+                        <!-- Epilepsy -->
+                        <div class="form-check d-flex gap-1">
+                            <input class="form-check-input" type="checkbox" value="Epilepsy">
+                            <label class="form-check-label">
+                                Epilepsy
+                            </label>
+                        </div>
+                        <!-- High Blood Pressure -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="High Blood Pressure">
+                            <label class="form-check-label">High Blood Pressure</label>
+                        </div>
+                        <!-- Diabetes -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Diabetes">
+                            <label class="form-check-label">Diabetes</label>
+                        </div>
+                        <!-- Asthma -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Asthma">
+                            <label class="form-check-label">Asthma</label>
+                        </div>
+                        <!-- Heart Disease -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Heart Disease">
+                            <label class="form-check-label">Heart Disease</label>
+                        </div>
+                        <!-- Stroke -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Stroke">
+                            <label class="form-check-label">Stroke</label>
+                        </div>
+                        <!-- Thyroid Disease -->
+                        <div class="form-check d-flex gap-1">
+                            <input class="form-check-input" type="checkbox" value="Thyroid Disease">
+                            <label class="form-check-label">
+                                Thyroid Disease
+                            </label>
+                        </div>
+                        <!-- Others -->
+                        <div class="form-check d-flex gap-1">
+                            <input class="form-check-input" type="checkbox" value="Others">
+                            <label class="form-check-label">
+                                Others
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Operations History -->
+                <div class="d-flex flex-column">
+                    <label>Operations History</label>
+                    <textarea rows="6" placeholder="Operations History" ></textarea>
+                </div>
+                <!-- Additional Comment -->
+                <div class="d-flex flex-column">
+                    <label>Additional Comment</label>
+                    <textarea rows="6" placeholder="Additional Comment" ></textarea>
+                </div>
+
+                <!-- !=================== QR هنا يا مصطفى :) -->
+                <!-- <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
+                  Launch
+                </button>
+                <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalTitleId">QR</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                            <div class="modal-body">
+                                <div class="container-fluid text-center">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/444px-QR_code_for_mobile_English_Wikipedia.svg.png" 
+                                        width="200"
+                                        height="200"
+                                        alt="QR"
+                                        class="m-auto" />
+                                        مكانه أهو يا صاصا
+                                        QR
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- !Health & Unhealth Habits Form -->
+                <!-- *Title -->
+                <h3 class="mb-0 mt-4 text-capitalize text-center">Health & Unhealth Habits Form</h3>
+                <!-- Exercise -->
+                <div class="d-flex flex-column">
+                    <label>Exercise</label>
+                    <input type="text" placeholder="Enter Exercise Habits">
+                </div>
+                <!-- Eating following a diet -->
+                <div class="d-flex flex-column">
+                    <label for="diet" class="form-label">Eating following a diet</label>
+                    <input type="text" placeholder="Enter Eating Habits">
+                </div>
+                <!-- Alcohol consumption -->
+                <div class="d-flex flex-column">
+                    <label>Alcohol consumption</label>
+                    <input type="text" placeholder="Enter Alcohol Consumption habits">
+                </div>
+                <!-- Caffeine consumption -->
+                <div class="d-flex flex-column">
+                    <label>Caffeine consumption</label>
+                    <input type="text" placeholder="Enter caffeine consumption habits">
+                </div>
+                <!-- Do you smoke? -->
+                <div class="d-flex flex-column">
+                    <label>Do you smoke?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="smoking" value="yes">
+                        <label>
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="smoking" value="no">
+                        <label>
+                            No
+                        </label>
+                    </div>
+                </div>
+                <!-- !BTN => Submit -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+        <script src="../index.js"></script>
+    </body>
+    
+    </html>

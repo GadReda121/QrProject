@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(UserController::class)->group(function() {
+    Route::get('/', 'create')->name('create');
+    Route::post('/', 'store')->name('store');
+    Route::get('edit', 'edit')->name('edit');
+    Route::put('update/{id_number}', 'update')->name('update');
+    Route::get('qr/{user}', 'showQr')->name('showQr');
+    Route::get('/{user}', 'show')->name('show');
 });

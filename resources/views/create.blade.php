@@ -8,6 +8,9 @@
         @include('partials.errors')
         <!-- Sign in -->
         <div class="signIn m-auto">
+            <div class="logo mb-4">
+                <img src="/assets/Images/logo.png" alt="" />
+            </div>
             <h2 class="text-center text-uppercase fw-bolder">Sign In</h2>
             <!-- form -->
             <form action="{{ route('store') }}" method="POST">

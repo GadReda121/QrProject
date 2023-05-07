@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::controller(UserController::class)->group(function() {
-    Route::get('/', 'create')->name('create');
-    Route::post('/', 'store')->name('store');
-    Route::get('edit', 'edit')->name('edit');
-    Route::put('update/{id_number}', 'update')->name('update');
+    Route::get('/', 'index')->name('index');
+    // Route::post('/', 'store')->name('store');
+    Route::get('create', 'create')->name('create')->middleware(['prevent.back']);
+    Route::post('store', 'store')->name('store');
     Route::get('qr/{user}', 'showQr')->name('showQr');
     Route::get('/{user}', 'show')->name('show');
 });

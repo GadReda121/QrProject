@@ -9,42 +9,36 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class UserController extends Controller
 {
-    public function create()
+    public function index()
     {
-        return view('create');
+        return view('index');
     }
 
-    public function store(Request $request)
+    public function create(Request $request)
     {
-        $user = User::where('id_number', $request->id_number)->first();
+        if (!$request->has('id_number')) {
+            return redirect()->route('index');
+        }
 
-        if($user)
+        $user = User::where('id_number', $request->id_number)->first();
+        if ($user)
             return redirect()->route('showQr', $user->id);
 
-        $user = User::create([
+        return view('create', [
             'id_number' => $request->id_number
         ]);
-        return redirect()->route('edit')->with('id_number', $user->id_number);
     }
 
-    public function edit()
+    public function store(UserRequest $request)
     {
-        $id_number = session('id_number');
-        if ($id_number)
-            return view('edit', [
-                'id_number' => $id_number
-            ]);
+        // Check if id number exists
+        $user = User::where('id_number', $request->id_number)->first();
+        if ($user)
+            return redirect()->route('showQr', $user->id);
 
-        return redirect()->route('create');
-    }
-
-    public function update(UserRequest $request, $id_number)
-    {
-        $user = User::where('id_number', $id_number)->first();
-        $user->update($request->except(['habit', 'history', '_token', '_method']));
-
+        // If not create new user
+        $user = User::create($request->except(['habit', 'history', '_token', '_method']));
         $user->habit()->create($request->habit);
-
         $user->history()->create($request->history);
 
         return redirect()->route('showQr', $user->id);

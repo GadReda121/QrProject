@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->enum('gender', ['Male', 'Female', 'Other'])->default('Male');
+            $table->enum('gender', ['Male', 'Female'])->default('Male');
             $table->smallInteger('age')->nullable();
             $table->enum('marital_status', ['Single', 'Married', 'Divorced', 'Widowed', 'Other'])->default('Single');
             $table->string('id_number')->nullable()->unique();

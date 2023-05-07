@@ -52,13 +52,6 @@ class UserRequest extends FormRequest
         ];
     }
 
-    public function withValidator(Validator $validator)
-    {
-        if ($validator->fails()) {
-            return redirect()->back()->with('id_number', $this->id_number)->withErrors($validator);
-        }
-    }
-
     public function messages()
     {
         return [
